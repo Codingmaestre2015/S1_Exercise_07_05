@@ -44,6 +44,19 @@ function zoomFig() {
 
 }
 
+/* create event listeners for left arrow, right arrow, and center figure element */
+function createEventListeners() {
+    var leftarrow = document.getElementById("leftarrow");
+    leftarrow.addEventListener("click", leftArrow);
+
+    var rightarrow = document.getElementById("rightarrow");
+    rightarrow.addEventListener("click", rightArrow);
+
+    var mainFig = document.getElementsByTagName("img")[1];
+    mainFig.addEventListener("click", zoomFig);
+}
+
+
 /* create event listeners and populate image elements */
 function setUpPage() {
     createEventListeners();
